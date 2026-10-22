@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap');
+
+:root {
+  color-scheme: light;
+
+  --bg: #F4F1EA;
+  --surface: #FBF9F4;
+  --surface-raised: #FFFEFA;
+  --surface-muted: #EDE8DE;
+
+  --border: #DDD6C8;
+  --border-strong: #C9C0B1;
+
+  --ink: #1F1D1A;
+  --text-secondary: #625D54;
+  --text-tertiary: #746D62;
+
+  --accent: #C8553D;
+  --accent-hover: #A94A32;
+  --accent-active: #8B3426;
+  --accent-text: #8B3426;
+  --on-accent: #FFFFFF;
+  --accent-soft: #F5DCD6;
+
+  --success: #5B6B4E;
+  --success-text: #35432B;
+  --success-soft: #E3E8DB;
+
+  --todo-text: #625D54;
+  --todo-soft: #EDE8DE;
+
+  --progress-text: #67451C;
+  --progress-soft: #F3E4CB;
+
+  --done-text: #35432B;
+  --done-soft: #E3E8DB;
+
+  --danger: #8B3426;
+  --danger-text: #6D241B;
+  --danger-soft: #F5DCD6;
+
+  --priority-high: #6D241B;
+  --priority-high-soft: #F5DCD6;
+  --priority-medium: #67451C;
+  --priority-medium-soft: #F3E4CB;
+  --priority-low: #625D54;
+  --priority-low-soft: #EDE8DE;
+
+  --chart-bar: #9AAB87;
+  --chart-bar-current: #C8553D;
+  --chart-gridline: #DDD6C8;
+  --progress-track: #E2DCCF;
+  --progress-fill: #5B6B4E;
+
+  --focus-ring: #8B3426;
+  --selection-bg: #E8D7C7;
+
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "DM Sans", system-ui, sans-serif;
+
+  --radius-sm: 5px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+
+  --shadow-popover: 0 8px 24px rgb(31 29 26 / 10%);
+  --shadow-drag: 0 6px 16px rgb(31 29 26 / 12%);
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  --bg: #28251F;
+  --surface: #332F28;
+  --surface-raised: #3B362E;
+  --surface-muted: #302C25;
+
+  --border: #514A3F;
+  --border-strong: #716657;
+
+  --ink: #F4EDE1;
+  --text-secondary: #C9C0B1;
+  --text-tertiary: #B8AD9C;
+
+  --accent: #E06D55;
+  --accent-hover: #EA8570;
+  --accent-active: #D45A41;
+  --accent-text: #EE9B88;
+  --on-accent: #1F1D1A;
+  --accent-soft: #4A302A;
+
+  --success: #B8C7A8;
+  --success-text: #B8C7A8;
+  --success-soft: #354032;
+
+  --todo-text: #C9C0B1;
+  --todo-soft: #3B362E;
+
+  --progress-text: #E7C58D;
+  --progress-soft: #443727;
+
+  --done-text: #B8C7A8;
+  --done-soft: #354032;
+
+  --danger: #EE9B88;
+  --danger-text: #F0C3B5;
+  --danger-soft: #4A302A;
+
+  --priority-high: #F0C3B5;
+  --priority-high-soft: #4A302A;
+  --priority-medium: #E7C58D;
+  --priority-medium-soft: #443727;
+  --priority-low: #C9C0B1;
+  --priority-low-soft: #3B362E;
+
+  --chart-bar: #899A77;
+  --chart-bar-current: #E06D55;
+  --chart-gridline: #514A3F;
+  --progress-track: #514A3F;
+  --progress-fill: #B8C7A8;
+
+  --focus-ring: #EE9B88;
+  --selection-bg: #514035;
+
+  --shadow-popover: 0 8px 24px rgb(0 0 0 / 25%);
+  --shadow-drag: 0 6px 16px rgb(0 0 0 / 30%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+h1, h2, h3 {
+  margin: 0;
+  color: var(--ink);
+}
+
+p {
+  margin: 0;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: var(--selection-bg);
+  color: var(--ink);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,76 @@
+.task-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--border);
+}
+
+.task-row:last-child {
+    border-bottom: 0;
+}
+
+.task-row input[type="checkbox"] {
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    accent-color: var(--success);
+    cursor: pointer;
+}
+
+.task-main {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
+}
+
+.task-main .field {
+    min-height: 36px;
+}
+
+.task-text {
+    font-size: 15px;
+    font-weight: 500;
+    overflow-wrap: anywhere;
+}
+
+.task-text.completed {
+    color: var(--text-secondary);
+    text-decoration: line-through;
+}
+
+.task-due {
+    color: var(--text-secondary);
+    font-size: 12px;
+    font-variant-numeric: tabular-nums;
+}
+
+.task-due.is-overdue {
+    color: var(--danger-text);
+    font-weight: 600;
+}
+
+.task-due.is-today {
+    color: var(--progress-text);
+    font-weight: 600;
+}
+
+.task-actions {
+    display: flex;
+    flex-shrink: 0;
+    gap: 2px;
+}
+
+@media (max-width: 520px) {
+    .task-row {
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 12px;
+    }
+
+    .task-main {
+        flex-basis: calc(100% - 40px);
+    }
+}
